@@ -14,6 +14,11 @@ const taskSchema = new moongose.Schema({
         type: Date,
         default: Date.now,
     },
+    user: {
+        type: moongose.Schema.Types.ObjectId,
+        ref: 'User',
+        require:true
+    }
 }, {
     timestamps: true
 });
