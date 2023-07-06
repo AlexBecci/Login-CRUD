@@ -1,5 +1,6 @@
 import Task from "../models/task.model.js"
 
+//CRUD
 export const getTasks = async (req, res) => {
 
     const tasks = await Task.find();
