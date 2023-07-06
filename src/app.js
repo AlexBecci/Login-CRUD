@@ -1,9 +1,10 @@
 import express from "express";
 import morgan from "morgan";
 import authRoutes from './routes/auth.routes.js'
+import cors from "cors"
+
 import cookieParser from "cookie-parser";
 import tasksRoutes from "./routes/tasks.routes.js"
-import cors from "cors"
 
 const app = express()
 
