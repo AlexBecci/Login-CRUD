@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
+
 function App() {
   return (
     <BrowserRouter>
@@ -7,14 +10,8 @@ function App() {
           path="/"
           element={<h1 className="text-4xl font-bold">Home page</h1>}
         />
-        <Route
-          path="/login"
-          element={<h1 className="text-4xl font-bold">login </h1>}
-        />
-        <Route
-          path="/register"
-          element={<h1 className="text-4xl font-bold">register </h1>}
-        />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route
           path="/tasks"
           element={<h1 className="text-4xl font-bold">Tasks</h1>}
