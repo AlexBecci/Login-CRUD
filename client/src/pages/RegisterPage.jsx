@@ -4,8 +4,12 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function RegisterPage() {
-  const { register, handleSubmit } = useForm();
-  const { signup, isAuthenticated } = useAuth();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const { signup, isAuthenticated, errors: registerErrors } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,6 +22,11 @@ function RegisterPage() {
   });
   return (
     <div className="bg-zinc-800 max-w-md p-10 rounded-md">
+      {registerErrors.map((error, i) => (
+        <div className="bg-red-500 p-2 text-white" key={i}>
+          {error}
+        </div>
+      ))}
       <form onSubmit={onSubmit}>
         <input
           type="text"
