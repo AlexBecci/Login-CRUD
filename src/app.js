@@ -9,7 +9,7 @@ import tasksRoutes from "./routes/tasks.routes.js"
 const app = express()
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://login-crud.vercel.app/',
     credentials: true
 }))
 app.use(morgan('dev'));
