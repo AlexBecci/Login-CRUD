@@ -11,6 +11,7 @@ function RegisterPage() {
   } = useForm();
 
   const { signup, isAuthenticated, errors: registerErrors } = useAuth();
+  
   const navigate = useNavigate();
 
   const onSubmit = handleSubmit(async (values) => {

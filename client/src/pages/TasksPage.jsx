@@ -9,7 +9,7 @@ function TasksPage() {
   }, []);
 
   if (tasks.length === 0) {
-    return <h1>No tasksW</h1>;
+    return <h1>No tasks</h1>;
   }
   return (
     <div>
