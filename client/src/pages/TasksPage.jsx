@@ -1,3 +1,4 @@
+import TaskCard from "../components/TaskCard";
 import { useTasks } from "../context/TasksContext";
 import { useEffect } from "react";
 
@@ -14,10 +15,7 @@ function TasksPage() {
   return (
     <div>
       {tasks.map((task) => (
-        <div key={task._id}>
-          <h1>{task.title}</h1>
-          <p>{task.description}</p>
-        </div>
+        <TaskCard key={task._id} task={task} />
       ))}
     </div>
   );
