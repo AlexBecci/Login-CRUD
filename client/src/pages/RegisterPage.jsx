@@ -33,16 +33,23 @@ function RegisterPage() {
           {...register("username", { required: true })}
           className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md"
         />
+        {errors.username && (
+          <p className="text-red-500">username is required</p>
+        )}
         <input
           type="email"
           {...register("email", { required: true })}
           className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md"
         />
+        {errors.email && <p className="text-red-500">email is required</p>}
         <input
           type="password"
           {...register("password", { required: true })}
           className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md"
         />
+        {errors.password && (
+          <p className="text-red-500">password is required</p>
+        )}
         <button type="submit">register</button>
       </form>
     </div>
