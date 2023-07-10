@@ -38,7 +38,7 @@ function LoginPage() {
         {errors.password && (
           <p className="text-red-500">password is required</p>
         )}
-        <button type="submit">register</button>
+        <button type="submit">Login</button>
       </form>
       <p className="flex gap-x-2 justify-between">
         Don't have an account? <Link className="text-cyan-500" to={"/register"}>Sign up</Link>
