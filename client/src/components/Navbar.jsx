@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <nav className="justify-between flex">
-      <Link>
+      <Link to={isAuthenticated ? "/tasks" : "/"}>
         <h1>Tasks Manager</h1>
       </Link>
       <ul className="flex ">
