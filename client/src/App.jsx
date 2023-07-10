@@ -2,36 +2,32 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import { AuthProvider } from "./context/AuthContext";
+import ProfilePage from "./pages/ProfilePage";
+import TasksPage from "./pages/TasksPage";
+import TaskFormPage from "./pages/TaskFormPage";
+import HomePage from "./pages/HomePage";
+import ProtectedRoute from "./ProtectedRoute";
+import { TaskProvider } from "./context/TasksContext";
 
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={<h1 className="text-4xl font-bold">Home page</h1>}
-          />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route
-            path="/tasks"
-            element={<h1 className="text-4xl font-bold">Tasks</h1>}
-          />
-          <Route
-            path="/add-task"
-            element={<h1 className="text-4xl font-bold">New Taks </h1>}
-          />
-          <Route
-            path="/tasks/:id"
-            element={<h1 className="text-4xl font-bold">Update tasks</h1>}
-          />
-          <Route
-            path="/profile"
-            element={<h1 className="text-4xl font-bold">Profile</h1>}
-          />
-        </Routes>
-      </BrowserRouter>
+      <TaskProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+
+            <Route element={<ProtectedRoute />}>
+              <Route path="/tasks" element={<TasksPage />} />
+              <Route path="/add-task" element={<TaskFormPage />} />
+              <Route path="/tasks/:id" element={<TaskFormPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </TaskProvider>
     </AuthProvider>
   );
 }
