@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import { useAuth } from "../context/AuthContext";
 
 function TasksPage() {
-  return (
-    <div>TasksPage</div>
-  )
+  const { user } = useAuth();
+  console.log(user);
+  return <div>TasksPage</div>;
 }
 
-export default TasksPage
+export default TasksPage;
