@@ -9,6 +9,7 @@ function RegisterPage() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const { signup, isAuthenticated, errors: registerErrors } = useAuth();
   const navigate = useNavigate();
 
@@ -17,6 +18,7 @@ function RegisterPage() {
       navigate("/tasks");
     }
   }, [isAuthenticated]);
+
   const onSubmit = handleSubmit(async (values) => {
     signup(values);
   });
