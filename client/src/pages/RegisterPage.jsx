@@ -13,15 +13,16 @@ function RegisterPage() {
   const { signup, isAuthenticated, errors: registerErrors } = useAuth();
   const navigate = useNavigate();
 
+  const onSubmit = handleSubmit(async (values) => {
+    signup(values);
+  });
+
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/tasks");
     }
   }, [isAuthenticated]);
 
-  const onSubmit = handleSubmit(async (values) => {
-    signup(values);
-  });
   return (
     <div className="bg-zinc-800 max-w-md p-10 rounded-md">
       {registerErrors.map((error, i) => (

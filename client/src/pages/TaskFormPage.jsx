@@ -1,11 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useTasks } from "../context/TasksContext";
 
 function TaskFormPage() {
   const { register, handleSubmit } = useForm();
+  const { createTask } = useTasks();
+
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
+    createTask(data);
   });
+
   return (
     <div className="text-red-500">
       <form onSubmit={onSubmit}>
