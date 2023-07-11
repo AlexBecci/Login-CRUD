@@ -15,7 +15,7 @@ function RegisterPage() {
   const navigate = useNavigate();
 
   const onSubmit = handleSubmit(async (values) => {
-    console.log(values)
+    console.log(values);
     signup(values);
   });
 
@@ -27,7 +27,7 @@ function RegisterPage() {
 
   return (
     <>
-      <div className=" bg-gray-800 max-w-lg bg-opacity-50 rounded-lg p-8 flex flex-col md:mx-auto w-full my-32 md:my-8 ">
+      <div className=" bg-gray-800 max-w-lg bg-opacity-50 rounded-lg p-8 flex flex-col md:mx-auto w-full my-36 md:my-20 ">
         {registerErrors.map((error, i) => (
           <div className="bg-red-500 p-2 text-white" key={i}>
             {error}
@@ -38,9 +38,7 @@ function RegisterPage() {
             Register
           </h2>
           <div className="relative mb-4">
-            <label for="full-name" className="leading-7 text-sm text-gray-400">
-              Username
-            </label>
+            <label className="leading-7 text-sm text-gray-400">Username</label>
             <input
               type="text"
               {...register("username", { required: true })}
@@ -130,7 +128,7 @@ function RegisterPage() {
         </p>
       </div>
     */}
-    </> 
+    </>
   );
 }
 
