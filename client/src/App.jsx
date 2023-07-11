@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage";
 import ProtectedRoute from "./ProtectedRoute";
 import { TaskProvider } from "./context/TasksContext";
 import Navbar from "./components/Navbar";
-import Footer from "./pages/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
                 <Route path="/profile" element={<ProfilePage />} />
               </Route>
             </Routes>
-            <Footer/>
+            <Footer />
           </main>
         </BrowserRouter>
       </TaskProvider>

@@ -7,14 +7,16 @@ function Navbar() {
   console.log(user);
 
   return (
-    <nav className="justify-between flex">
+    <nav className="justify-between flex my-8 ">
       <Link to={isAuthenticated ? "/tasks" : "/"}>
-        <h1>Tasks Manager</h1>
+        <h1 className="text-xl font-semibold">Web Notes</h1>
       </Link>
       <ul className="flex ">
         {isAuthenticated ? (
           <>
-            <li>Welcome {user.username}</li>
+            <li>
+              Welcome <span className="px-4">{user.username}</span>{" "}
+            </li>
             <li>
               <Link to={"/add-task"}>Add Task</Link>
             </li>
@@ -24,12 +26,15 @@ function Navbar() {
           </>
         ) : (
           <>
-            <li>
+          <div className="flex justify-center">
+
+            <li className="mx-2 px-2 border-2 border-sky-500 rounded-full sm:hover:scale-105 duration-200 hover:border-sky-300">
               <Link to={"/login"}>Login</Link>
             </li>
-            <li>
+            <li className="mx-2 px-2 border-2 border-sky-500 rounded-full sm:hover:scale-105 duration-200 hover:border-sky-300">
               <Link to={"/register"}>Register</Link>
             </li>
+          </div>
           </>
         )}
       </ul>
