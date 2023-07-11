@@ -27,7 +27,7 @@ function RegisterPage() {
 
   return (
     <>
-      <div className=" bg-gray-00 max-w-lg bg-opacity-50 rounded-lg p-8 flex flex-col md:mx-auto w-full my-32 md:my-8 ">
+      <div className=" bg-gray-800 max-w-lg bg-opacity-50 rounded-lg p-8 flex flex-col md:mx-auto w-full my-32 md:my-8 ">
         {registerErrors.map((error, i) => (
           <div className="bg-red-500 p-2 text-white" key={i}>
             {error}
