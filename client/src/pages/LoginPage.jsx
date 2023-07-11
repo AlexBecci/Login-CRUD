@@ -45,7 +45,7 @@ function LoginPage() {
               {...register("email", { required: true })}
               className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-sky-900 rounded border border-gray-600 focus:border-sky-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
-            {errors.username && (
+            {errors.email && (
               <p className="text-red-500 my-1">email is required</p>
             )}
           </div>
@@ -58,7 +58,7 @@ function LoginPage() {
               {...register("password", { required: true })}
               className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-sky-900 rounded border border-gray-600 focus:border-sky-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
-            {errors.username && (
+            {errors.password && (
               <p className="text-red-500 my-1">password is required</p>
             )}
           </div>
