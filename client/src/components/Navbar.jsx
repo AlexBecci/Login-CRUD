@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="justify-between flex my-8 ">
       <Link to={isAuthenticated ? "/tasks" : "/"}>
-        <h1 className="text-xl font-semibold">Web Notes</h1>
+        <h1 className="text-xl font-semibold">Task Creator</h1>
       </Link>
       <ul className="flex ">
         {isAuthenticated ? (
@@ -26,12 +26,12 @@ function Navbar() {
           </>
         ) : (
           <>
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center">
 
-            <li className="mx-2 px-2 border-2 border-sky-500 rounded-full sm:hover:scale-105 duration-200 hover:border-sky-300">
+            <li className="mx-2 px-2 border-2 border-sky-500 rounded-full sm:hover:scale-105 duration-200 hover:border-sky-300 ">
               <Link to={"/login"}>Login</Link>
             </li>
-            <li className="mx-2 px-2 border-2 border-sky-500 rounded-full sm:hover:scale-105 duration-200 hover:border-sky-300">
+            <li className="mx-2 px-2 border-2 border-sky-500 rounded-full sm:hover:scale-105 duration-200 hover:border-sky-300 ">
               <Link to={"/register"}>Register</Link>
             </li>
           </div>
