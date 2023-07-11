@@ -33,7 +33,7 @@ function RegisterPage() {
             {error}
           </div>
         ))}
-        <form onSubmit={onSubmit}>
+        <form className="items-center" onSubmit={onSubmit}>
           <h2 className="text-white text-lg font-medium title-font mb-5">
             Register
           </h2>
@@ -78,7 +78,7 @@ function RegisterPage() {
           </div>
           <button
             type="submit"
-            className="text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-sky-600 rounded-xl text-lg mx-auto my-4"
+            className="text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-sky-600 rounded-xl  text-lg mx-auto my-4"
           >
             Register
           </button>
